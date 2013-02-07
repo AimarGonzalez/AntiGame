@@ -32,10 +32,10 @@ package com.antigame.states.menu
 			super.initialize();
 			
 			
-			var background:CitrusSprite = new CitrusSprite("back", {view:new Quad(stage.stageWidth, stage.stageHeight, 0xFFFFFF), width:stage.stageWidth, height:stage.stageHeight});
+			var background:CitrusSprite = new CitrusSprite("back", {view:new Quad(stage.stageWidth, stage.stageHeight, 0x0), width:stage.stageWidth, height:stage.stageHeight});
 			add(background);
 			
-			add(MenuFactory.createCenteredLabel(this.stage,"label","¡¡SPLASH!!", 60, true));	
+			add(MenuFactory.createCenteredLabel(this.stage,"label","¡¡SPLASH!!", 60, 0xFFFFFF, true));	
 			
 			waitSomeSecondsAndShowLoadingScreen(2);
 		}

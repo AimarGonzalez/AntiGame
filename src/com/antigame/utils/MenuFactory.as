@@ -12,14 +12,14 @@ package com.antigame.utils
 	public class MenuFactory
 	{
 		
-		public static function createCenteredLabel(stage:Stage, labelId:String, text:String, fontSize:Number=60, bold:Boolean=false, y:Number = -1):CitrusSprite{
+		public static function createCenteredLabel(stage:Stage, labelId:String, text:String, fontSize:Number=60, color:int = 0x0, bold:Boolean=false, y:Number = -1):CitrusSprite{
 			var center:Number = stage.stage.stageWidth/2;
 			
-			return createLabel(labelId, text, fontSize, bold, center, y>-1 ? y : stage.stage.stageHeight/2)
+			return createLabel(labelId, text, fontSize, color, bold, center, y>-1 ? y : stage.stage.stageHeight/2)
 		}
 		
-		public static function createLabel(labelId:String, text:String, fontSize:Number=60, bold:Boolean=false, x:Number = -1, y:Number = -1):CitrusSprite{
-			var textField:TextField=new TextField(600, 100, text,"Verdana",fontSize, 0x0, bold);
+		public static function createLabel(labelId:String, text:String, fontSize:Number=60, color:int = 0x0, bold:Boolean=false, x:Number = -1, y:Number = -1):CitrusSprite{
+			var textField:TextField=new TextField(600, 100, text,"Verdana",fontSize, color, bold);
 			textField.autoScale=true;
 			
 			var label:CitrusSprite=new CitrusSprite(labelId, {view:textField, 

@@ -33,7 +33,7 @@ package com.antigame.states.menu
 			var background:CitrusSprite = new CitrusSprite("back", {view:new Quad(stage.stageWidth, stage.stageHeight, 0xFFFFFF), width:stage.stageWidth, height:stage.stageHeight});
 			add(background);
 			
-			add(MenuFactory.createCenteredLabel(this.stage,"titleLabel","LEVEL SELECTION", 60, true, 200));	
+			add(MenuFactory.createCenteredLabel(this.stage,"titleLabel","LEVEL SELECTION", 60, 0x0,true, 200));	
 			
 			level1Button = MenuFactory.createButton("lvl1", "Level 1", 200, 350);
 			level2Button = MenuFactory.createButton("lvl2", "Level 2", 400, 350);
